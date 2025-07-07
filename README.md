@@ -1,9 +1,10 @@
 **Python starter** for Google OAuth **using a local server flow**. This pattern will:
-✅ Open a Chrome tab for user consent
-✅ Receive the auth code back on localhost
-✅ Exchange it for tokens
-✅ Call a simple Google API to confirm authentication (e.g., get your user email)
-✅ Output “Hello, {email}!”
+
+- ✅ Open a Chrome tab for user consent
+- ✅ Receive the auth code back on localhost
+- ✅ Exchange it for tokens
+- ✅ Call a simple Google API to confirm authentication (e.g., get your user email)
+- ✅ Output “Hello, {email}!”
 
 ## **REQUIREMENTS / GOALS**
 
@@ -23,7 +24,7 @@ uv sync
 **Create OAuth credentials:**
 1. Go to https://console.cloud.google.com/apis/credentials
 2. Create a new **OAuth 2.0 Client ID**
-3. Choose **Desktop App** OR **Web application** with http://localhost:8080/ as redirect URI
+3. Choose **Web application** with http://localhost:8080/ as redirect URI
 4. Download the JSON (e.g., client_secret.json)
 
 ## **2. Minimal starter script**
@@ -65,7 +66,7 @@ if __name__ == '__main__':
 ```
 
 ## **3. Expected Outcome**
-- On python your_script.py:
+- On `uv run main.py`:
     - A Chrome tab opens to Google’s consent page.
     - You sign in & allow.
     - Your local server gets the auth code.
